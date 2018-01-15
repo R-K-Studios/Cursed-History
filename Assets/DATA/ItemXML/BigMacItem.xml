@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<Evidence>
+	<Name>Big Mac Wrapper</Name>
+	<ID>BMW</ID>
+	<Icon>BIG_MAC.png</Icon>
+	<GameObject>BIG_MAC</GameObject>
+	<HoverTextOptions>
+		<HoverText>I guess they liked the secret sauce...?</HoverText>
+		<HoverText for="Test">Test was always a fan of secrets...</HoverText>
+	</HoverTextOptions>
+	<Flags>
+		<Flag>
+			<FlagName>Liked McDonalds</FlagName>
+			<ApplyToWhom self="true"\>
+		</Flag>
+		<Flag>
+			<FlagName>Big Boned</FlagName>
+			<ApplyToWhom>
+				<Generation all="true">1</Generation>
+			</ApplyToWhom>
+		</Flag>
+		<Flag>
+			<FlagName>Cool</FlagName>
+			<ApplyToWhom>
+				<Generation>2</Generation>
+				<PersonID>Test</PersonID>
+			</ApplyToWhom>
+			<Bio>Anyone with this flag set is <bold>S U P E R   C O O L</bold></bio>
+		</Flag>
+	</Flags>
+</Evidence>
