@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - EvidenceDropzone
+  - Evidence
   layers:
   - Default
   - TransparentFX
@@ -38,6 +40,30 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background_Behind
+    uniqueID: 2246837815
+    locked: 0
+  - name: Background_Forward
+    uniqueID: 4220020519
+    locked: 0
+  - name: Table
+    uniqueID: 1460267825
+    locked: 0
+  - name: Evidence_Sitting
+    uniqueID: 4039773109
+    locked: 0
+  - name: Gameboard_BG
+    uniqueID: 3861176445
+    locked: 0
+  - name: Gameboard_Node
+    uniqueID: 1159690825
+    locked: 0
+  - name: Evidence_Dragging
+    uniqueID: 1110100773
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: EDITOR STUFF
+    uniqueID: 1605047993
     locked: 0

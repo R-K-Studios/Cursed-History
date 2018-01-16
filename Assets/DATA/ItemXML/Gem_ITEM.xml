@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<Evidence>
+	<Name>Pretty Gem</Name>
+	<ID>gem</ID>
+	<Icon>gem</Icon>
+	<HoverTextOptions>
+	</HoverTextOptions>
+	<Flags>
+	</Flags>
+</Evidence>
