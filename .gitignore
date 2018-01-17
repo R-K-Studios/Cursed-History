@@ -1,0 +1,7 @@
+*.suo
+*.meta
+*.log
+Library/
+ProjectSettings/
+UnityPackageManager/
+.vs/
