@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<Evidence>
+	<Name>Magic Book</Name>
+	<ID>book</ID>
+	<Icon>book</Icon>
+	<HoverTextOptions>
+		<HoverText>I guess they liked the secret sauce...?</HoverText>
+		<HoverText for="Test">Test was always a fan of secrets...</HoverText>
+	</HoverTextOptions>
+	<Flags>
+		<Flag>
+			<Name>Liked McDonalds</Name>
+			<ApplyToWhom>
+				<Generation>0</Generation>
+				<PersonID>SELF</PersonID>
+			</ApplyToWhom>
+		</Flag>
+		<Flag>
+			<Name>Big Boned</Name>
+			<ApplyToWhom>
+				<Generation>1</Generation>
+				<PersonID>ALL</PersonID>
+			</ApplyToWhom>
+		</Flag>
+		<Flag>
+			<Name>Cool</Name>
+			<ApplyToWhom>
+				<Generation>2</Generation>
+				<PersonID>Test</PersonID>
+			</ApplyToWhom>
+			<Bio>Anyone with this flag set is [bold]S U P E R   C O O L[/bold]</Bio>
+		</Flag>
+	</Flags>
+</Evidence>
