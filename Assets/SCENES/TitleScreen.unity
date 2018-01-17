@@ -521,7 +521,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!1 &210244629
 GameObject:
   m_ObjectHideFlags: 0
@@ -2093,7 +2093,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 873767059
+  randomSeed: -121610479
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -5412,7 +5412,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &640771407
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10136,7 +10136,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243159227408322670, guid: a624140384d43f649a8bbaea572d72e7,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 8a0fe47e055c9884ab4a2c4d24c52f77, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 55ff84fae6f72444da414cf2063f6838, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -10240,7 +10240,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000022888, y: -193.2}
+  m_AnchoredPosition: {x: -0.000022888, y: -193.2002}
   m_SizeDelta: {x: 0, y: 286.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1199851059
@@ -10455,7 +10455,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -139363323
+  randomSeed: 1096880186
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -11015,7 +11015,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 10
+      scalar: 30
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -14037,7 +14037,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 560849546
+  randomSeed: 752908722
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -18215,7 +18215,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -62.1, y: -24.6}
+  m_AnchoredPosition: {x: -62.100098, y: -24.599998}
   m_SizeDelta: {x: 409.7, y: 111.8}
   m_Pivot: {x: 0.25, y: 0.5}
 --- !u!114 &1662220349
@@ -18416,7 +18416,7 @@ MonoBehaviour:
   m_FillRect: {fileID: 620655998}
   m_HandleRect: {fileID: 1346450544}
   m_Direction: 0
-  m_MinValue: -80
+  m_MinValue: -40
   m_MaxValue: 0
   m_WholeNumbers: 0
   m_Value: 0

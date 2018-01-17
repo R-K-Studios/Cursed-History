@@ -138,6 +138,9 @@ public class OptionsPanel : MonoBehaviour
         PlayerPrefs.SetFloat("MusVol", value);
         audioMixer.SetFloat("MusicVolume", value);
         Debug.Log("Music Volume Set to : " + value);
+        MusMute.isOn = false;
+
+        PlayerPrefs.SetInt("MusMute", 0);
     }
 
     //Set the Sound Volume
@@ -146,6 +149,10 @@ public class OptionsPanel : MonoBehaviour
         PlayerPrefs.SetFloat("SFXVol", value);
         audioMixer.SetFloat("SoundVolume", value);
         Debug.Log("Sound Volume Set to : " + value);
+        SFXMute.isOn = false;
+
+
+        PlayerPrefs.SetInt("SFXMute", 0);
     }
 
     //Mute the music
@@ -155,61 +162,37 @@ public class OptionsPanel : MonoBehaviour
         float vol = MusVol.value;
         if (value)
         {
-            //reflect volume on slider
-            MusVol.value = -80;
-            //set volume to 0
-            SetMusVolume(MusVol.value);
-            //save old volume
-            PlayerPrefs.SetFloat("MusVol", vol);
-            Debug.Log("Music Volume Set to : " + vol);
 
+            PlayerPrefs.SetFloat("MusVol", vol);
+            audioMixer.SetFloat("MusicVolume", -80);
         }
         else
         {
             //reset volume
             audioMixer.SetFloat("MusicVolume", PlayerPrefs.GetFloat("MusVol"));
 
-            //reflect volume on slider
-            audioMixer.GetFloat("MusicVolume", out vol);
-            MusVol.value = vol;
-
         }
 
         //save setting
         PlayerPrefs.SetInt("MusMute", value ? 1 : 0);
-        Debug.Log("MusMute Set to : " + value);
     }
 
     //Mute the sounds
     public void SetSFXMute(bool value)
     {
-
         float vol = SFXVol.value;
         if (value)
         {
-            //reflect volume on slider
-            SFXVol.value = -80;
-            //set volume SFXVol 0
-            SetSFXVolume(SFXVol.value);
-            //save old volume
             PlayerPrefs.SetFloat("SFXVol", vol);
-            Debug.Log("Sound Volume Set to : " + vol);
-
+            audioMixer.SetFloat("SoundVolume", -80);
         }
         else
         {
-            //reset volume
             audioMixer.SetFloat("SoundVolume", PlayerPrefs.GetFloat("SFXVol"));
-
-            //reflect volume on slider
-            audioMixer.GetFloat("SoundVolume", out vol);
-            SFXVol.value = vol;
-
         }
 
         //save setting
         PlayerPrefs.SetInt("MusMute", value ? 1 : 0);
-        Debug.Log("MusMute Set to : " + value);
     }
 
     //Set FullSccreen
@@ -218,7 +201,7 @@ public class OptionsPanel : MonoBehaviour
         PlayerPrefs.SetInt("Fullscreen", value ? 1 : 0);
         Debug.Log("Fullscreen Set to : " + value);
 
-        Screen.fullScreen = value;
+        Screen.fullScreen = value;  
 
     }
 
@@ -240,7 +223,7 @@ public class OptionsPanel : MonoBehaviour
     public void LoadPrefs()
     {
         
-
+        /*
         //Music Volume
         if (PlayerPrefs.HasKey("MusVol"))
             MusVol.value = PlayerPrefs.GetFloat("MusVol");
