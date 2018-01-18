@@ -15,12 +15,18 @@ public class Flag {
     public string Bio { get; set; }
 }
 
+
 [XmlRoot("Evidence")]
 public class EvidenceBaseData {
     public string Name { get; set; }
     public string ID { get; set; }
     public string Icon { get; set; }
+    public string EnlargeID { get; set; }
+    [XmlArray("HoverTextOptions")]
+    [XmlArrayItem("HoverText")]
     public string[] HoverTextOptions { get; set; }
+    [XmlArray("Flags")]
+    [XmlArrayItem("Flag")]
     public Flag[] Flags { get; set; }
 
 }
@@ -34,7 +40,7 @@ public class EvidenceBase : MonoBehaviour {
     public Flag[] Flags;
 
     public void setFromBaseData(EvidenceBaseData setFrom) {
-        print("Setting the evidence base...");
+        //print("Setting the evidence base...");
         Name = (string)setFrom.Name.Clone();
         ID = (string)setFrom.ID.Clone();
         Icon = (string)setFrom.Icon.Clone();

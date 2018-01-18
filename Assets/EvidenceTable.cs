@@ -6,14 +6,14 @@ public class EvidenceTable : MonoBehaviour {
 
     public GameObject TableItemPrefab;
 
-    private void startup() {
-        print("Hello!");
+    private void Startup() {
+        //print("Hello!");
         GameObject[] allEvidence = EvidenceManager.Instance.getAllEvidence();
         int x = 0;
         foreach (GameObject item in allEvidence) {
             GameObject tableItem = Instantiate(TableItemPrefab);
-            print(tableItem);
-            print(item);
+            //print(tableItem);
+            //print(item);
             item.transform.parent = tableItem.transform;
             item.transform.localPosition = new Vector3(0, 0, 0);
             item.transform.localScale = new Vector3(1, 1, 1);
@@ -26,7 +26,7 @@ public class EvidenceTable : MonoBehaviour {
 
     // Use this for initialization
     void Start() {
-        EvidenceManager.Instance.runOnReady(new System.Action(startup));
+        EvidenceManager.Instance.runOnReady(new System.Action(Startup));
     }
 
     // Update is called once per frame

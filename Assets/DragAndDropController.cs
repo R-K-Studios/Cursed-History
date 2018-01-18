@@ -32,7 +32,9 @@ public class DragAndDropController : MonoBehaviour {
         var inputPosition = CurrentTouchPosition;
 
         if (draggingItem) {
-            draggedObject.transform.position = inputPosition + touchOffset;
+            Vector3 p = inputPosition + touchOffset;
+            p.z = -200;
+            draggedObject.transform.position = p;
         } else {
             RaycastHit2D[] touches = Physics2D.RaycastAll(inputPosition, inputPosition, 0.5f);
             if (touches.Length > 0) {
@@ -67,7 +69,7 @@ public class DragAndDropController : MonoBehaviour {
             int numResults = draggedCollider.OverlapCollider(noFilter, results);
             if (numResults != 0) {
                 GameObject node = results[0].gameObject;
-                NodeItemHandle nodeScript = node.GetComponent<NodeItemHandle>();
+                TreeNode nodeScript = node.GetComponent<TreeNode>();
                 if (nodeScript != null) {
                     nodeScript.HandleDrop(draggedObject.transform.GetChild(0).gameObject);
                 }

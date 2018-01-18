@@ -340,8 +340,8 @@
     <Compile Include="Assets\EvidenceBase.cs" />
     <Compile Include="Assets\EvidenceDropStateMachine.cs" />
     <Compile Include="Assets\EvidenceManager.cs" />
-    <Compile Include="Assets\EvidenceState.cs" />
     <Compile Include="Assets\EvidenceTable.cs" />
+    <Compile Include="Assets\Gameboard.cs" />
     <Compile Include="Assets\IMPORTS\CSV2Table\Demo\C2TDemo.cs" />
     <Compile Include="Assets\IMPORTS\CSV2Table\Demo\SampleTable.cs" />
     <Compile Include="Assets\IMPORTS\CSV2Table\Scripts\CsvParser.cs" />
@@ -446,19 +446,27 @@
 =======
     <Compile Include="Assets\initEvidenceDropStates.cs" />
     <Compile Include="Assets\NodeItemHandle.cs" />
-    <Compile Include="Assets\ObjectToXML.cs" />
     <Compile Include="Assets\SCRIPTS\MenuPointer.cs" />
 >>>>>>> d96c7e1ea4c11b5ce6e39dd9cd3f6a7e6ad6ae82
     <Compile Include="Assets\SCRIPTS\TitleScreen\FamilyTreeNodeImporter.cs" />
+<<<<<<< HEAD
+    <Compile Include="Assets\TreeNode.cs" />
+    <Compile Include="Assets\TreeNodeManager.cs" />
+=======
     <Compile Include="Assets\SCRIPTS\TitleScreen\MenuPointer.cs" />
     <Compile Include="Assets\SCRIPTS\TitleScreen\OptionsPanel.cs" />
     <Compile Include="Assets\SCRIPTS\TitleScreen\Transition.cs" />
+>>>>>>> refs/remotes/origin/master
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\DATA\ItemXML\BigMacItem.xml" />
     <None Include="Assets\DATA\ItemXML\Book_ITEM.xml" />
     <None Include="Assets\DATA\ItemXML\Gem_ITEM.xml" />
-    <None Include="Assets\DATA\TreeNodes\TestNode.xml" />
+    <None Include="Assets\DATA\TreeNodes\TestNode2_NODE.xml" />
+    <None Include="Assets\DATA\TreeNodes\TestNode3_NODE.xml" />
+    <None Include="Assets\DATA\TreeNodes\TestNode4_NODE.xml" />
+    <None Include="Assets\DATA\TreeNodes\TestNode5_NODE.xml" />
+    <None Include="Assets\DATA\TreeNodes\TestNode_NODE.xml" />
     <None Include="Assets\IMPORTS\ObjectNotes\readme.txt" />
     <None Include="Assets\IMPORTS\Pixelplacement\Surge\License.txt" />
     <None Include="Assets\IMPORTS\Pixelplacement\Surge\ReadMe.txt" />

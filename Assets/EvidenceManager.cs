@@ -21,7 +21,7 @@ public class EvidenceManager : Singleton<EvidenceManager> {
         // Make a key/sprite dict
         Dictionary<string, Sprite> spriteRef = new Dictionary<string, Sprite>();
         foreach (Sprite cur in EvidenceSprites) {
-            print(cur.name);
+            //print(cur.name);
             spriteRef.Add(cur.name, cur);
         }
         XmlSerializer xmlSer = new XmlSerializer(typeof(EvidenceBaseData));
@@ -29,8 +29,8 @@ public class EvidenceManager : Singleton<EvidenceManager> {
         foreach (string fileName in Directory.GetFileSystemEntries(path, "*_ITEM.xml")) {
             FileStream evidenceItem = new FileStream(fileName, FileMode.Open);
             EvidenceBaseData newItem = (EvidenceBaseData)xmlSer.Deserialize(evidenceItem);
-            print(newItem);
-            print(newItem.Icon);
+            //print(newItem);
+            //print(newItem.Icon);
             // Build the gameobject based on the new evidence base
             GameObject newGO = Instantiate(evidencePrefab);
             newGO.name = newItem.ID;
@@ -78,7 +78,7 @@ public class EvidenceManager : Singleton<EvidenceManager> {
     private void prepActionDone() {
         ready++;
         if (ready == prepActions) {
-            print("EvidenceManager Prep Done");
+            //print("EvidenceManager Prep Done");
             foreach(System.Action waiting in doOnStart) {
                 waiting();
             }

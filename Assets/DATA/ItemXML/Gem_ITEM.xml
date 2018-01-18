@@ -4,6 +4,7 @@
 	<Name>Pretty Gem</Name>
 	<ID>gem</ID>
 	<Icon>gem</Icon>
+	<EnlargeID>gem</EnlargeID>
 	<HoverTextOptions>
 	</HoverTextOptions>
 	<Flags>

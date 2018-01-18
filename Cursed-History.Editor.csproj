@@ -422,7 +422,11 @@
     <None Include="Assets\DATA\ItemXML\BigMacItem.xml" />
     <None Include="Assets\DATA\ItemXML\Book_ITEM.xml" />
     <None Include="Assets\DATA\ItemXML\Gem_ITEM.xml" />
-    <None Include="Assets\DATA\TreeNodes\TestNode.xml" />
+    <None Include="Assets\DATA\TreeNodes\TestNode2_NODE.xml" />
+    <None Include="Assets\DATA\TreeNodes\TestNode3_NODE.xml" />
+    <None Include="Assets\DATA\TreeNodes\TestNode4_NODE.xml" />
+    <None Include="Assets\DATA\TreeNodes\TestNode5_NODE.xml" />
+    <None Include="Assets\DATA\TreeNodes\TestNode_NODE.xml" />
     <None Include="Assets\IMPORTS\ObjectNotes\readme.txt" />
     <None Include="Assets\IMPORTS\Pixelplacement\Surge\License.txt" />
     <None Include="Assets\IMPORTS\Pixelplacement\Surge\ReadMe.txt" />
