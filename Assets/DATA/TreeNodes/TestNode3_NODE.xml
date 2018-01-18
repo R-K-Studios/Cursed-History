@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<FamilyTreeNode>
+	<Name>Testy McTesterson</Name>
+	<ID>Test3</ID>
+	<Icon>TestIcon</Icon>
+	<CorrectItem>book</CorrectItem>
+	<Parent>Test</Parent>
+	<Children>
+		<Child>Test5</Child>
+	</Children>
+	<Bio>
+		[u][b][i]TEST[/i][/b][/u]
+	</Bio>
+</FamilyTreeNode>

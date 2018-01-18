@@ -340,8 +340,8 @@
     <Compile Include="Assets\EvidenceBase.cs" />
     <Compile Include="Assets\EvidenceDropStateMachine.cs" />
     <Compile Include="Assets\EvidenceManager.cs" />
-    <Compile Include="Assets\EvidenceState.cs" />
     <Compile Include="Assets\EvidenceTable.cs" />
+    <Compile Include="Assets\Gameboard.cs" />
     <Compile Include="Assets\IMPORTS\CSV2Table\Demo\C2TDemo.cs" />
     <Compile Include="Assets\IMPORTS\CSV2Table\Demo\SampleTable.cs" />
     <Compile Include="Assets\IMPORTS\CSV2Table\Scripts\CsvParser.cs" />
@@ -487,15 +487,20 @@
     <Compile Include="Assets\IMPORTS\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
     <Compile Include="Assets\initEvidenceDropStates.cs" />
     <Compile Include="Assets\NodeItemHandle.cs" />
-    <Compile Include="Assets\ObjectToXML.cs" />
     <Compile Include="Assets\SCRIPTS\MenuPointer.cs" />
     <Compile Include="Assets\SCRIPTS\TitleScreen\FamilyTreeNodeImporter.cs" />
+    <Compile Include="Assets\TreeNode.cs" />
+    <Compile Include="Assets\TreeNodeManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\DATA\ItemXML\BigMacItem.xml" />
     <None Include="Assets\DATA\ItemXML\Book_ITEM.xml" />
     <None Include="Assets\DATA\ItemXML\Gem_ITEM.xml" />
-    <None Include="Assets\DATA\TreeNodes\TestNode.xml" />
+    <None Include="Assets\DATA\TreeNodes\TestNode2_NODE.xml" />
+    <None Include="Assets\DATA\TreeNodes\TestNode3_NODE.xml" />
+    <None Include="Assets\DATA\TreeNodes\TestNode4_NODE.xml" />
+    <None Include="Assets\DATA\TreeNodes\TestNode5_NODE.xml" />
+    <None Include="Assets\DATA\TreeNodes\TestNode_NODE.xml" />
     <None Include="Assets\IMPORTS\ObjectNotes\readme.txt" />
     <None Include="Assets\IMPORTS\Pixelplacement\Surge\License.txt" />
     <None Include="Assets\IMPORTS\Pixelplacement\Surge\ReadMe.txt" />

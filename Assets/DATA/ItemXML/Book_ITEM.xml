@@ -4,6 +4,7 @@
 	<Name>Magic Book</Name>
 	<ID>book</ID>
 	<Icon>book</Icon>
+	<EnlargeID>book</EnlargeID>
 	<HoverTextOptions>
 		<HoverText>I guess they liked the secret sauce...?</HoverText>
 		<HoverText for="Test">Test was always a fan of secrets...</HoverText>
