@@ -25,19 +25,22 @@ public class EvidenceManager : Singleton<EvidenceManager> {
             spriteRef.Add(cur.name, cur);
         }
         XmlSerializer xmlSer = new XmlSerializer(typeof(EvidenceBaseData));
-        string path = Path.Combine(Path.Combine(Application.dataPath, "DATA"), "ItemXML");
-        foreach (string fileName in Directory.GetFileSystemEntries(path, "*_ITEM.xml")) {
-            FileStream evidenceItem = new FileStream(fileName, FileMode.Open);
-            EvidenceBaseData newItem = (EvidenceBaseData)xmlSer.Deserialize(evidenceItem);
-            //print(newItem);
-            //print(newItem.Icon);
-            // Build the gameobject based on the new evidence base
-            GameObject newGO = Instantiate(evidencePrefab);
-            newGO.name = newItem.ID;
-            newGO.GetComponent<SpriteRenderer>().sprite = spriteRef[newItem.Icon];
-            newGO.GetComponent<EvidenceBase>().setFromBaseData(newItem);
-            newGO.SetActive(false);
-            evidence.Add(newItem.ID, newGO);
+        string path = Path.Combine("DATA", "ItemXML");
+        foreach (TextAsset xml in Resources.LoadAll<TextAsset>(path)) {
+            print(xml.text);
+            try {
+                MemoryStream xmlStream = new MemoryStream(xml.bytes);
+                EvidenceBaseData newItem = (EvidenceBaseData)xmlSer.Deserialize(xmlStream);
+                // Build the gameobject based on the new evidence base
+                GameObject newGO = Instantiate(evidencePrefab);
+                newGO.name = newItem.ID;
+                newGO.GetComponent<SpriteRenderer>().sprite = spriteRef[newItem.Icon];
+                newGO.GetComponent<EvidenceBase>().setFromBaseData(newItem);
+                newGO.SetActive(false);
+                evidence.Add(newItem.ID, newGO);
+            } catch {
+                // Do nothing
+            }
         }
         prepActionDone();
     }

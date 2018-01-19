@@ -19,6 +19,7 @@ public class TreeNodeManager : Singleton<TreeNodeManager> {
     public const int prepActions = 2;
 
     private void Start() {
+        print("On Tree Node Manager Start...");
         // Make a key/sprite dict
         Dictionary<string, Sprite> spriteRef = new Dictionary<string, Sprite>();
         foreach (Sprite cur in nodeSprites) {
@@ -27,12 +28,18 @@ public class TreeNodeManager : Singleton<TreeNodeManager> {
         }
         List<GameObject> rootNodeList = new List<GameObject>();
         XmlSerializer xmlSer = new XmlSerializer(typeof(FamilyTreeNode));
-        string path = Path.Combine(Path.Combine(Application.dataPath, "DATA"), "TreeNodes");
-        foreach (string fileName in Directory.GetFileSystemEntries(path, "*_NODE.xml")) {
+        string path = "DATA/TreeNodes";
+        print(Resources.LoadAll<TextAsset>(path).Length);
+        foreach(TextAsset xml in Resources.LoadAll<TextAsset>(path)) {
+            print(xml.text);
             try {
-                FileStream evidenceItem = new FileStream(fileName, FileMode.Open);
+                MemoryStream xmlStream = new MemoryStream(xml.bytes);
+                //XmlReader reader = XmlReader.Create(xml.text);
+                //FileStream evidenceItem = new FileStream(fileName, FileMode.Open);
                 //print(fileName);
-                FamilyTreeNode newNode = (FamilyTreeNode)xmlSer.Deserialize(evidenceItem);
+                //FamilyTreeNode newNode = (FamilyTreeNode)xmlSer.Deserialize(xml.text);
+                //FamilyTreeNode newNode = (FamilyTreeNode)xmlSer.Deserialize(reader);
+                FamilyTreeNode newNode = (FamilyTreeNode)xmlSer.Deserialize(xmlStream);
                 // Build the gameobject based on the new evidence base
                 GameObject newGO = Instantiate(nodePrefab);
                 newGO.name = newNode.ID;
