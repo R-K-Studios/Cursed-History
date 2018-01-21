@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<Evidence>
+	<Name>Old Newspaper Clipping</Name>
+	<ID>Newspaper</ID>
+	<Icon>Newspaper</Icon>
+	<EnlargeID>NewspaperPopup</EnlargeID>
+	<HoverTextOptions>
+		A newspaper clipping from the mid 80's
+	</HoverTextOptions>
+	<Flags>
+	</Flags>
+</Evidence>

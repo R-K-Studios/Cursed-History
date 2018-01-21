@@ -81,6 +81,7 @@ public class MenuPointer : MonoBehaviour {
                     rt.Release();
                     oldCamera.enabled = false;
                     fadeImage.enabled = false;
+                    this.gameObject.GetComponentInParent<Canvas>().transform.Find("Logo").gameObject.SetActive(false); // Kill the partical
                     loadingSceneTransitionState = 3;
                 }
             } else if (loadingSceneTransitionState == 3) {
