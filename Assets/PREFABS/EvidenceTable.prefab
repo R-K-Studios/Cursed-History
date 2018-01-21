@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4956573487406648}
   - component: {fileID: 61358250627474584}
   - component: {fileID: 50715690655116306}
-  - component: {fileID: 114588944403452074}
   m_Layer: 0
   m_Name: EvidenceTable
   m_TagString: Evidence
@@ -87,17 +86,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.75, y: 2.2}
   m_EdgeRadius: 0
---- !u!114 &114588944403452074
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1216805392339142}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 085571ca4fdbbdb4db284f2d7b508970, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  evidenceRef: {fileID: 0}
-  slowestClickSpeed: 0.2
-  downTime: 0
