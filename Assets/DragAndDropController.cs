@@ -72,10 +72,11 @@ public class DragAndDropController : MonoBehaviour {
                 TreeNode nodeScript = node.GetComponent<TreeNode>();
                 if (nodeScript != null) {
                     nodeScript.HandleDrop(draggedObject.transform.GetChild(0).gameObject);
+                    draggedObject.transform.position = initPos;
                 }
             }
         }
         draggedObject.transform.localScale = new Vector3(1f, 1f, 1f);
-        draggedObject.transform.position = initPos;
+
     }
 }
