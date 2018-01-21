@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4406678218376522}
   - component: {fileID: 212857564654346130}
   - component: {fileID: 114583365788852708}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: EvidenceItem
   m_TagString: Evidence
   m_Icon: {fileID: 0}
@@ -55,6 +55,7 @@ MonoBehaviour:
   Name: 
   ID: 
   Icon: 
+  EnlargeID: 
   HoverTextOptions: []
 --- !u!212 &212857564654346130
 SpriteRenderer:
