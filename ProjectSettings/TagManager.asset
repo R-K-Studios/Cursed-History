@@ -6,7 +6,6 @@ TagManager:
   tags:
   - EvidenceDropzone
   - Evidence
-  - Special Camera
   layers:
   - Default
   - TransparentFX
@@ -16,7 +15,7 @@ TagManager:
   - UI
   - 
   - 
-  - Popup
+  - 
   - 
   - 
   - 
@@ -67,10 +66,4 @@ TagManager:
     locked: 0
   - name: EDITOR STUFF
     uniqueID: 1605047993
-    locked: 0
-  - name: Popup_BG
-    uniqueID: 2051949255
-    locked: 0
-  - name: Popup_Item
-    uniqueID: 565574063
     locked: 0
