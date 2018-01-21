@@ -4,13 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Audio;
 
-public class OptionsPanel : MonoBehaviour
+public class OptionsPanel : MenuUI
 {
     //Audio Mixer
     public AudioMixer audioMixer;
-
-    //UI Components
-    public CanvasGroup OptionsGroup;
 
     public Slider MusVol;
     public Slider SFXVol;
@@ -21,13 +18,6 @@ public class OptionsPanel : MonoBehaviour
 
     public Dropdown Resolutions;
 
-    //Bool for if the Menu is on screen
-    bool active = false;
-    //Bool for if the Menu is transitioning
-    bool moving = false;
-
-    //The position of the menu when active
-    float activeYPosition;
     Resolution[] resOptions;
 
     private void Awake()
@@ -37,7 +27,7 @@ public class OptionsPanel : MonoBehaviour
         //Resolution and Fullscreen preferences should be loaded on startup, though.
     }
 
-    void Start()
+    public void Start()
     {
         //Gather resolution list
         resOptions = Screen.resolutions;
@@ -65,70 +55,16 @@ public class OptionsPanel : MonoBehaviour
 
 
 
-        LoadPrefs();
-        //Get the active position
-        activeYPosition = transform.localPosition.y;
-        //Move it out of the way
-        transform.Translate(new Vector3(0, -1, 0));
-        //Make it invisible
-        OptionsGroup.alpha = 0;
-    }
-    
-    //Is the menu currently on screen?
-    public bool IsActive()
-    {
-        return active;
+        //LoadPrefs();
+        base.Start();
     }
 
- 
 
-
-    //Coroutine to fade in and out the menu and move it between positions
-    IEnumerator MovePanel()
+    public void Update()
     {
-        moving = true;
-        if (active && transform.localPosition.y < activeYPosition)
+        if (Input.GetButtonDown("Cancel"))
         {
-            while (transform.localPosition.y < activeYPosition)
-            {
-                transform.Translate(0, .1f, 0);
-                OptionsGroup.alpha += .2f;
-                yield return null;
-            }
-            transform.localPosition.Set(transform.localPosition.x, activeYPosition, 0);
-            yield return null;
-        }
-        else if (!active && OptionsGroup.alpha > 0)
-        {
-            while (OptionsGroup.alpha > 0)
-            {
-                OptionsGroup.alpha -= .1f;
-                transform.Translate(0, -.1f, 0);
-                yield return null;
-            }
-            yield return null;
-        }
-        moving = false;
-        yield return null;
-    }
-
-    //Call up the menu
-    public void SetActive()
-    {
-        if (!moving)
-        {
-            active = true;
-            StartCoroutine(MovePanel());
-        }
-    }
-
-    //Dismiss the menue
-    public void SetInactive()
-    {
-        if (!moving)
-        {
-            active = false;
-            StartCoroutine(MovePanel());
+            SetInactive();
         }
     }
 

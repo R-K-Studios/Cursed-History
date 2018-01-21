@@ -7,8 +7,12 @@ using System;
 public class AudioManager : Singleton<AudioManager> {
 
     // Use this for initialization
-    void Start () {
-		
+    void Awake () {
+        AudioManager instance = FindObjectOfType<AudioManager>();
+        if(instance != this)
+        {
+            Destroy(gameObject);
+        }
 	}
 	
 	// Update is called once per frame

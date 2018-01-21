@@ -10,6 +10,7 @@ public class Transition : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         MyGroup = GetComponent<CanvasGroup>();
+        MyGroup.alpha = 1;
 	}
 	
 	// Update is called once per frame

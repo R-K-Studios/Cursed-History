@@ -15,24 +15,11 @@ public class MenuPointer : MonoBehaviour {
     float offset = 20;
     float destinationRotation;
 
-    public int fadeTime = 0;
-    public string loadingScreenName = "LoadingScreen";
-    public string newGameName = "Gamespace";
-    public string sceneToLoad;
-    public bool loadNewGame = false;
-    public bool loadExistingGame = false;
-    public bool loadingScreenReady = false;
-    public int loadingSceneTransitionState = 0;
-    public Camera oldCamera;
-    public RenderTexture rt;
-    public RawImage fadeImage;
-    //public GameObject newCamera;
+    public TransitionManager TM;
     public OptionsPanel Opt;
 
     // Use this for initialization
     void Start() {
-        SceneManager.sceneLoaded += SceneDebug;
-        SceneManager.sceneUnloaded += SceneDebug;
         destinationRotation = MenuAngles[0];
         menuStartX = new float[menuOptions.Length];
         for (int i = 0; i < menuOptions.Length; i++)
@@ -43,6 +30,7 @@ public class MenuPointer : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+<<<<<<< HEAD
         if (loadingScreenReady) {
             if (loadingSceneTransitionState == 0) {
                 if (loadNewGame) {
@@ -129,6 +117,8 @@ public class MenuPointer : MonoBehaviour {
                 }
             }
         }
+=======
+>>>>>>> refs/remotes/origin/master
         if (!Opt.IsActive())
         {
             if (selection != LastSelection)
@@ -172,44 +162,15 @@ public class MenuPointer : MonoBehaviour {
             selection = (selection < 0) ? menuOptions.Length - 1 : (selection >= menuOptions.Length) ? 0 : selection;
 
         }
-        else
-        {
-            if (Input.GetButtonDown("Cancel"))
-            {
-                Opt.SetInactive();
-            }
-        }
     }
 
-    private void SceneDebug(Scene scene, LoadSceneMode mode) {
-        print("Scene: " + scene.name);
-        print("    Loaded");
-        print("    LoadScreneMode: " + mode.ToString());
-    }
 
-    private void SceneDebug(Scene scene) {
-        print("Scene: " + scene.name);
-        print("    Unloaded");
-    }
-
-    private void BringUpLoadingScreen() {
-        SceneManager.LoadSceneAsync(loadingScreenName, LoadSceneMode.Additive);
-        SceneManager.sceneLoaded += LoadingScreenLoaded;
-    }
-
-    private void LoadingScreenLoaded(Scene scene, LoadSceneMode mode) {
-        if (scene.name == loadingScreenName) {
-            print("Loaded Loading Screen...");
-            loadingScreenReady = true;
-            SceneManager.sceneLoaded -= LoadingScreenLoaded;
-        }
-    }
 
 
     public void NewGame()
     {
-        loadNewGame = true;
-        BringUpLoadingScreen();
+        if(!Opt.IsActive())
+        TM.NewGame();
     }
 
     public void Continue()
