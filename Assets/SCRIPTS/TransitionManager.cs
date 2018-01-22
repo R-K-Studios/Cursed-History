@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Pixelplacement;
 
-public class TransitionManager : MonoBehaviour {
+public class TransitionManager : Singleton<TransitionManager> {
 
     public int fadeTime = 0;
     public string loadingScreenName = "LoadingScreen";
@@ -23,7 +24,7 @@ public class TransitionManager : MonoBehaviour {
     // Use this for initialization
     void Start () {
         oldCamera = Camera.main;
-        fadeImage = GameObject.Find("FadeImage").GetComponent<RawImage>();
+        //fadeImage = GameObject.Find("FadeImage").GetComponent<RawImage>();
         SceneManager.sceneLoaded += SceneDebug;
         SceneManager.sceneUnloaded += SceneDebug;
     }
@@ -138,10 +139,11 @@ public class TransitionManager : MonoBehaviour {
                 int curSceneIndex = SceneManager.GetActiveScene().buildIndex;
                 for (var i = 0; i < SceneManager.sceneCountInBuildSettings; i++)
                 {
-                    if (i == curSceneIndex)
+                    if (i == curSceneIndex || !SceneManager.GetSceneByBuildIndex(i).isLoaded)
                     {
                         continue;
                     }
+                    print(i);
                     SceneManager.UnloadSceneAsync(i);
                 }
             }

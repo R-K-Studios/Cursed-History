@@ -450,7 +450,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1752277433472162}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.4, y: -1.95, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4276716535984562}
@@ -740,8 +740,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30a1e395ef1cee74da81ab3ef2988c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Main: {fileID: 0}
   portraitSpot: {fileID: 1840051661114810}
   evidenceItemSpot: {fileID: 1282097856418008}
+  spline: {fileID: 0}
+  SiblingRank: 0
+  NodeName: 
+  ID: 
+  Icon: 
+  CorrectItem: 
+  ParentName: 
+  ParentNode: {fileID: 0}
+  ShowParentLink: 0
+  ChildNodes: []
+  Bio: 
+  currentEvidence: {fileID: 0}
+  myStateMachine: {fileID: 0}
+  initLocalScale: {x: 0, y: 0, z: 0}
+  childNames: []
+  objectOver: 0
 --- !u!210 &210649115810211438
 SortingGroup:
   m_ObjectHideFlags: 1

@@ -538,6 +538,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4379285783124374}
   - component: {fileID: 114650280155827344}
+  - component: {fileID: 114991476204146238}
   m_Layer: 0
   m_Name: TransitionManager
   m_TagString: Untagged
@@ -1551,6 +1552,7 @@ MonoBehaviour:
   MyGroup: {fileID: 225032662994830676}
   Opt: {fileID: 114098331775964570}
   tm: {fileID: 114650280155827344}
+  pop: {fileID: 0}
 --- !u!114 &114078753540768604
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3586,6 +3588,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d29fe3afcc84cc44a8180e17d989c527, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _dontDestroyOnLoad: 0
   fadeTime: 2
   loadingScreenName: LoadingScreen
   newGameName: Gamespace
@@ -4474,6 +4477,17 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Save Game
+--- !u!114 &114991476204146238
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1325569123517430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55938fb1577dd4ad3af7e994048c86f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!222 &222007204038091670
 CanvasRenderer:
   m_ObjectHideFlags: 1
