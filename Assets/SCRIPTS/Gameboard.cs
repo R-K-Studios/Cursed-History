@@ -11,6 +11,11 @@ public class Gameboard : MonoBehaviour {
     private void SetupBoard() {
         print("+++Setting up the gameboard...");
         GameObject[] curLevel = TreeNodeManager.Instance.GetNodeTree();
+        SortedList<TreeNode, GameObject> sortList = new SortedList<TreeNode, GameObject>();
+        foreach(GameObject cur in curLevel) {
+            sortList.Add(cur.GetComponent<TreeNode>(), cur);
+        }
+        sortList.Values.CopyTo(curLevel, 0);
         int y = 0;
         List<GameObject> nextLevel;
         Transform row;
@@ -36,14 +41,20 @@ public class Gameboard : MonoBehaviour {
                 node.transform.localPosition = new Vector3(0, 0, node.transform.localPosition.z);
                 node.transform.localScale = new Vector3(1, 1, 1);
                 GameObject[] children = node.GetComponent<TreeNode>().ChildNodes;
+                SortedList<TreeNode, GameObject> childrenList = new SortedList<TreeNode, GameObject>();
                 if (children.Length > 0) {
                     foreach (GameObject kid in children) {
                         // Set the current node as this child's parent
                         TreeNode temp = kid.GetComponent<TreeNode>();
+                        print(temp.name);
                         temp.ParentNode = node;
+                        childrenList.Add(temp, kid);
                     }
-                    Array.Sort(children);
-                    nextLevel.AddRange(children);
+                    foreach(TreeNode temp in childrenList.Keys) {
+                        print(temp.name);
+                    }
+                    print(children);
+                    nextLevel.AddRange(childrenList.Values);
                     nextLevel.Add(null);
                 }
                 TreeNode nodeCode = node.GetComponent<TreeNode>();
