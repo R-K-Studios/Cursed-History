@@ -87,7 +87,7 @@ public class TreeNodeManager : Singleton<TreeNodeManager> {
             } else {
                 curChild = errorNode;
             }
-            kids[i] = AttachAllChildren(Instantiate(curChild));
+            kids[i] = AttachAllChildren((curChild));
         }
         nodeData.ChildNodes = kids;
         return node;
@@ -96,7 +96,7 @@ public class TreeNodeManager : Singleton<TreeNodeManager> {
     public GameObject[] GetNodeTree() {
         GameObject[] nodeTreeRoot = new GameObject[rootNodes.Length];
         for (var i = 0; i < rootNodes.Length; i++) {
-            nodeTreeRoot[i] = AttachAllChildren(Instantiate(rootNodes[i]));
+            nodeTreeRoot[i] = AttachAllChildren((rootNodes[i]));
         }
         return nodeTreeRoot;
     }
@@ -141,6 +141,32 @@ public class TreeNodeManager : Singleton<TreeNodeManager> {
         PrepActionDone();
     }
 
+    public void CheckCurrentNodeCorrectness() {
+        foreach(GameObject cur in nodes.Values) {
+            TreeNode curNode = cur.GetComponent<TreeNode>();
+            bool isOneNull = curNode.currentEvidence == null || curNode.CorrectItem == null;
+            bool bothNull = isOneNull && (curNode.currentEvidence == null && curNode.CorrectItem == null);
+            bool match = !isOneNull && curNode.currentEvidence.GetComponent<EvidenceBase>().ID == curNode.CorrectItem;
+            if (!bothNull && !match) {
+                Incorrect();
+                print(curNode.name);
+                if (isOneNull && curNode.currentEvidence == null) {
+                    print(null);
+                } else {
+                    print(curNode.currentEvidence.GetComponent<EvidenceBase>().ID);
+                }
+                print(curNode.CorrectItem);
+                return;
+            }
+        }
+        Correct();
+    }
 
+    private void Incorrect() {
+        print("WRONG");
+    }
 
+    private void Correct() {
+        print("RIGHT");
+    }
 }
