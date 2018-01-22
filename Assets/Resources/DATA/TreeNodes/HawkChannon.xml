@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 
 <FamilyTreeNode>
-	<Name>Hawk Channon</Name>
-	<ID>Hawk </ID>
-	<Icon>HawkIcon</Icon>
+	<Name>Hawke Channon</Name>
+	<ID>Hawke</ID>
+	<Portrait>HawkePortrait</Portrait>
 	<CorrectItem>AdoptionPaper</CorrectItem>
 	<SiblingRank>1</SiblingRank>
 	<Parent></Parent>

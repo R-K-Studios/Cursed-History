@@ -3,7 +3,7 @@
 <FamilyTreeNode>
 	<Name>Fox Wolfram</Name>
 	<ID>Fox</ID>
-	<Icon>FoxIcon</Icon>
+	<Portrait>FoxPortrait</Portrait>
 	<CorrectItem>FarmerNote</CorrectItem>
 	<SiblingRank>3</SiblingRank>
 	<Parent></Parent>

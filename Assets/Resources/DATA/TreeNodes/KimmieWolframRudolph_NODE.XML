@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 
 <FamilyTreeNode>
-	<Name>Kimmie Wolfram Rudolph</Name>
-	<ID>Kimmie</ID>
-	<Icon>KimmieIcon</Icon>
+	<Name>Kimmy Wolfram Rudolph</Name>
+	<ID>Kimmy</ID>
+	<Portrait>KimmyPortrait</Portrait>
 	<CorrectItem>MothersNote</CorrectItem>
 	<SiblingRank>1</SiblingRank>
 	<Parent ShowLink="false">Test</Parent>

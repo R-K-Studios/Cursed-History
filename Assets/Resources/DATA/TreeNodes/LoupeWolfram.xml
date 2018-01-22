@@ -3,7 +3,7 @@
 <FamilyTreeNode>
 	<Name>Loupe Wolfram</Name>
 	<ID>Loupe</ID>
-	<Icon>LoupeIcon</Icon>
+	<Portrait>LoupePortrait</Portrait>
 	<CorrectItem>Newspaper</CorrectItem>
 	<SiblingRank>2</SiblingRank>
 	<Parent/>
