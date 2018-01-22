@@ -11,16 +11,27 @@ public class InGameMenu : MenuUI {
     
     void Update () {
 
-        if (Input.GetButtonDown("Cancel") && !pop.showPopup)
+        if (Input.GetButtonDown("Cancel"))
         {
-            if (!IsActive())
+            if (Opt.IsActive())
             {
-                SetActive();
+                Opt.SetInactive();
             }
-            else if (!Opt.IsActive())
+            else if (!IsActive())
+            {
+                if (pop.showPopup)
+                {
+                    
+                }
+                else
+                {
+                    SetActive();
+                }
+            }
+            else
             {
                 SetInactive();
-            }
+            }  
         }
 	}
 

@@ -69,7 +69,10 @@ public class MenuPointer : MonoBehaviour {
                 Options();
             }
 
-
+            if (Input.GetButtonDown("Cancel") && Opt.IsActive())
+            {
+                Opt.SetInactive();
+            }
             selection = (selection < 0) ? menuOptions.Length - 1 : (selection >= menuOptions.Length) ? 0 : selection;
 
         }

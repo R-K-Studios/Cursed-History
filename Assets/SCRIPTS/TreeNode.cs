@@ -6,6 +6,7 @@ using UnityEngine;
 using Pixelplacement;
 using UnityEngine.EventSystems;
 using System;
+using Yarn.Unity;
 
 public class Parent {
     [XmlAttribute("ShowLink")]
@@ -31,6 +32,8 @@ public class FamilyTreeNode {
     [XmlArrayItem("Child")]
     public string[] Chidren { get; set; }
     public string Bio { get; set; }
+    [XmlElement("Yarn")]
+    public string Yarn { get; set; }
 }
 
 public class TreeNode : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerExitHandler, IComparable<TreeNode> {
@@ -39,6 +42,7 @@ public class TreeNode : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
     public GameObject portraitSpot;
     public GameObject evidenceItemSpot;
     public GameObject spline;
+    public TMPro.TextMeshPro NamePlate;
     public int SiblingRank;
     public string NodeName;
     public string ID;
@@ -55,6 +59,9 @@ public class TreeNode : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
     public Vector3 initLocalScale;
     public string[] childNames;
     public bool objectOver = false;
+
+    public string YarnNodeTitle;
+
 
     // Use this for initialization
     void Start() {
@@ -79,6 +86,8 @@ public class TreeNode : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
 
         }
         Bio = (string)setFrom.Bio.Clone();
+        YarnNodeTitle = (string)setFrom.Yarn.Clone();
+        NamePlate.text = ID;
     }
 
     public void PrepNode(Sprite sprite) {
@@ -130,6 +139,14 @@ public class TreeNode : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
         }
         objectOver = false;
         Main.transform.localScale = initLocalScale;
+    }
+
+    public void OnMouseUp()
+    {
+        //Debug.Log(YarnNodeTitle);
+        DialogueRunner dr = GameObject.Find("YarnSpinnerHolder").GetComponent<DialogueRunner>();
+        if(!dr.isDialogueRunning)
+            dr.StartDialogue(YarnNodeTitle);
     }
 
     public int CompareTo(TreeNode other) {

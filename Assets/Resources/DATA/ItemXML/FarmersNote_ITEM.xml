@@ -10,4 +10,8 @@
 	</HoverTextOptions>
 	<Flags>
 	</Flags>
+  <YarnNodes>
+    <Node>FarmerNoteFirstLook</Node>
+    <Node>FarmerNoteSummary</Node>
+  </YarnNodes>
 </Evidence>

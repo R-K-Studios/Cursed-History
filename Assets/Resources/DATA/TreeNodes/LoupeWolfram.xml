@@ -34,4 +34,5 @@
 		First, when the flag is created in "Flag.CSV", write the line of text within it's "bio" field. 
 		Then you can access it just by typing [when flag="cool"/]
 	</Bio>
+  <Yarn>LoupeSummary</Yarn>
 </FamilyTreeNode>
