@@ -18,6 +18,7 @@ public class Parent {
 public class FamilyTreeNode {
     public string Name { get; set; }
     public string ID { get; set; }
+    [XmlElement("Portrait")]
     public string Icon { get; set; }
     public string CorrectItem { get; set; }
 

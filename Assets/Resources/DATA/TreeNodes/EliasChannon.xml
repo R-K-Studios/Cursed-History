@@ -3,7 +3,7 @@
 <FamilyTreeNode>
 	<Name>Elias Channon</Name>
 	<ID>Elias</ID>
-	<Icon>EliasIcon</Icon>
+	<Portrait>EliasPortrait</Portrait>
 	<CorrectItem>Photo</CorrectItem>
 	<SiblingRank>1</SiblingRank>
 	<Parent>Hawk</Parent>
