@@ -1,0 +1,209 @@
+title: Puzzle1Start
+tags: 
+colorID: 0
+position: -880,-691
+---
+Okay. Mom's gone and all that she left me is this weird watch that goes backwards.
+A box of old documents.
+And a half-empty family tree.
+She wants me to solve the mystery of the 'family curse'
+Apparently people with the watch disappear mysteriously?
+But no one knows where it came from.
+Guess it's up to me to find out.
+I got it from mom, and mom got it from her dad.
+Who disappeared when she was super young...
+My great grandfather had three sons, but we don't actually know who her dad was.
+So I guess we'll start with finding out who he is?
+===
+title: MomNoteFirstLook
+tags: 
+colorID: 0
+position: -665,-693
+---
+It's not surprising for mom to disappear at a moment's notice...
+I'm sure she'll be back. Curses aren't real.
+...still, the tone of this note is...
+...weird.
+Also I don't think I've seen her sign her full name before.
+Never knew that was her middle name.
+===
+title: MomNoteSummary
+tags: 
+colorID: 0
+position: -457,-693
+---
+Mom's note. She's gone away. Her middle name is Wolfram.
+===
+title: AdoptFirstLook
+tags: 
+colorID: 0
+position: -664,-481
+---
+Adoption Papers...?
+I guess 'Hawke' was adopted.
+Would a 'curse' even work on an adoptee?
+Not that curses are real.
+===
+title: AdoptSummary
+tags: 
+colorID: 0
+position: -457,-481
+---
+I guess Hawke was adopted when he was 4.
+===
+title: BorisFirstLook
+tags: 
+colorID: 0
+position: -663,-269
+---
+A letter written by my great grandfather Boris.
+"Eldest living child" certainly applies to me and mom.
+If we assume this is true, then...
+whoever had the watch before her was the oldest brother, right?
+Still guy must have been pretty supersticious to think the watch was actually cursed.
+===
+title: BorisSummary
+tags: 
+colorID: 0
+position: -454,-273
+---
+The watch is passed down to the eldest living child.
+Mom seems to agree that the curse is nonsense.
+===
+title: NewspaperFirstLook
+tags: 
+colorID: 0
+position: -665,-59
+---
+Mom's dad disappeared after this incident?
+I wonder if he was attacked by the dog.
+It doesn't really tell me who owned the farm, though.
+Maybe something else will let me know?
+===
+title: NewspaperSummary
+tags: 
+colorID: 0
+position: -458,-61
+---
+The night grandpa disappeared, the farm was attacked by a dog.
+I guess he didn't run the farm though.
+===
+title: FarmerNoteFirstLook
+tags: 
+colorID: 0
+position: -665,151
+---
+Looks like a todo list.
+Stuff that you do on a farm?
+Looks like this didn't belong to Hawke or Loupe.
+===
+title: FarmNoteSummary
+tags: 
+colorID: 0
+position: -458,155
+---
+A note from a farmer. 
+Probably Fox.
+===
+title: PhotoFirstLook
+tags: 
+colorID: 0
+position: -664,364
+---
+Mom never really reconnected to her dad's side of the family.
+So I honestly don't know who this is.
+Of course this doesn't look like mom's handwriting.
+Which makes me think someone else's dad was adopted.
+===
+title: PhotoSummary
+tags: 
+colorID: 0
+position: -455,365
+---
+The biological mother of an adoptee.
+Who could have written this?
+===
+title: Failure
+tags: 
+colorID: 0
+position: -166,-612
+---
+Hmm... something doesn't seem right.
+I should give it another woof.
+Er... look.
+===
+title: TotalFailure
+tags: 
+colorID: 0
+position: -167,-399
+---
+I don't feel so woof... good...
+Something weird is going on here.
+Grrrreat... are you telling me the barking curse is real?
+Need to... grrfight it..
+I... I never told him... bark
+woof...
+...
+===
+title: MomSummary
+tags: 
+colorID: 0
+position: -152,-31
+---
+Kimberley Rudolph. Born: 1984
+It's my mom.
+She's not the best mom, but she... tries.
+===
+title: EliasSummary
+tags: 
+colorID: 0
+position: -154,183
+---
+Elias Channon. Born: 1968
+The son of Hawke. That's about all I know.
+===
+title: HawkeSummary
+tags: 
+colorID: 0
+position: 64,-37
+---
+Hawk Channon. Born: 1944
+It's a little weird that he has a different last name isn't it?
+===
+title: LoupeSummary
+tags: 
+colorID: 0
+position: 62,181
+---
+Loupe Wolfram. Born: 1947
+Guess he's the middle child.
+He kinda looks like a jerk.
+===
+title: FoxSummary
+tags: 
+colorID: 0
+position: 282,-36
+---
+Fox Wolfram. Born: 1951
+The youngest of the Wolfram bros.
+He seems sweet.
+===
+title: Success
+tags: 
+colorID: 0
+position: 154,-413
+---
+Looks like the watch really does stick to the family.
+If mom's middle name is her maiden name, and Fox was the farm owner...
+The only conclusion I can come to is that Mom's dad was Loupe Wolfram.
+But if she got it from him, then it didn't go to the eldest child.
+Except it looks like Boris really wanted it to go to Hawke.
+Heh, I guess curses really don't work through adoption.
+Not that the curse is real...
+Well, it would explain why I'm here and not Elias.
+I feel like I'm missing something, though.
+Why would you adopt someone just to inherit a watch..?
+And what exactly happened on that farm that night?
+I wonder if I can learn more by looking up that newspaper.
+Or maybe there's more clues in these other boxes?
+===

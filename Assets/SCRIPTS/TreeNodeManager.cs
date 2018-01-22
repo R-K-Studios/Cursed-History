@@ -7,6 +7,7 @@ using UnityEngine;
 using Pixelplacement;
 using System.Linq;
 
+
 public class TreeNodeManager : Singleton<TreeNodeManager> {
 
     public GameObject errorNode;
@@ -15,8 +16,13 @@ public class TreeNodeManager : Singleton<TreeNodeManager> {
     public List<System.Action> doOnStart = new List<System.Action>();
     public Dictionary<string, GameObject> nodes = new Dictionary<string, GameObject>();
     public GameObject[] rootNodes;
+    public WatchScript watch;
     public int ready = 0;
     public const int prepActions = 2;
+    public bool win = false;
+    public bool lose = false;
+    public Yarn.Unity.DialogueRunner dr;
+    public TransitionManager tm;
 
     private void Start() {
         print("On Tree Node Manager Start...");
@@ -70,6 +76,15 @@ public class TreeNodeManager : Singleton<TreeNodeManager> {
         } else {
             return Instantiate(errorNode);
         }
+    }
+
+    public void Update()
+    {
+        if(win || lose)
+            if (!dr.isDialogueRunning)
+            {
+                tm.TitleScreen();
+            }
     }
 
     private GameObject AttachAllChildren(GameObject node) {
@@ -163,10 +178,23 @@ public class TreeNodeManager : Singleton<TreeNodeManager> {
     }
 
     private void Incorrect() {
+        
+        watch.Hour-= 1;
+        if (watch.Hour == 0)
+        {
+            GameObject.Find("YarnSpinnerHolder").GetComponent<Yarn.Unity.DialogueRunner>().StartDialogue("TotalFailure");
+            lose = true;
+        }
+        else
+        {
+            GameObject.Find("YarnSpinnerHolder").GetComponent<Yarn.Unity.DialogueRunner>().StartDialogue("Failure");
+        }
         print("WRONG");
     }
 
     private void Correct() {
         print("RIGHT");
+        GameObject.Find("YarnSpinnerHolder").GetComponent<Yarn.Unity.DialogueRunner>().StartDialogue("Success");
+        win = true;
     }
 }

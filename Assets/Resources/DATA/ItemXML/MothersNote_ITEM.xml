@@ -10,4 +10,9 @@
 	</HoverTextOptions>
 	<Flags>
 	</Flags>
+
+  <YarnNodes>
+    <Node>MomNoteFirstLook</Node>
+    <Node>MomNoteSummary</Node>
+  </YarnNodes>
 </Evidence>

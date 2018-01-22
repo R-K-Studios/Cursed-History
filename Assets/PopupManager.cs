@@ -39,7 +39,7 @@ public class PopupManager : Singleton<PopupManager> {
     }
 
     private void CheckForEscape() {
-        if (curShow && Input.GetAxis("Cancel") > 0) {
+        if (curShow && Input.GetButtonDown("Cancel")) {
             showPopup = false;
         }
     }

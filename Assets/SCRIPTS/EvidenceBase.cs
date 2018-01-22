@@ -12,7 +12,8 @@ public class ApplyToWhom {
 public class Flag {
     public string Name { get; set; }
     public ApplyToWhom ApplyToWhom { get; set; }
-    public string Bio { get; set; }
+    public string Bio { get; set;
+    }
 }
 
 
@@ -22,12 +23,16 @@ public class EvidenceBaseData {
     public string ID { get; set; }
     public string Icon { get; set; }
     public string EnlargeID { get; set; }
+    public string Yarn { get; set; }
     [XmlArray("HoverTextOptions")]
     [XmlArrayItem("HoverText")]
     public string[] HoverTextOptions { get; set; }
     [XmlArray("Flags")]
     [XmlArrayItem("Flag")]
     public Flag[] Flags { get; set; }
+    [XmlArray("YarnNodes")]
+    [XmlArrayItem("Node")]
+    public string[] YarnNodes { get; set; }
 
 }
 
@@ -37,7 +42,8 @@ public class EvidenceBase : MonoBehaviour {
     public string ID;
     public string Icon;
     public string EnlargeID;
-    public string[] HoverTextOptions; 
+    public string[] HoverTextOptions;
+    public string[] YarnNodes;
     public Flag[] Flags;
 
     public void setFromBaseData(EvidenceBaseData setFrom) {
@@ -48,5 +54,6 @@ public class EvidenceBase : MonoBehaviour {
         EnlargeID = (string)setFrom.EnlargeID.Clone();
         HoverTextOptions = setFrom.HoverTextOptions;
         Flags = setFrom.Flags;
+        YarnNodes = setFrom.YarnNodes;
     }
 }

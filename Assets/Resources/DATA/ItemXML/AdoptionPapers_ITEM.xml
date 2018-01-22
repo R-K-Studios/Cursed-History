@@ -10,4 +10,8 @@
 	</HoverTextOptions>
 	<Flags>
 	</Flags>
+  <YarnNodes>
+    <Node>AdoptFirstLook</Node>
+    <Node>AdoptSummary</Node>
+  </YarnNodes>
 </Evidence>

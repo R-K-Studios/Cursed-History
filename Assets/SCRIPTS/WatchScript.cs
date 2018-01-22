@@ -8,6 +8,8 @@ public class WatchScript : MonoBehaviour {
     public Image HourHand;
     public Image MinuteHand;
     public Image SecondHand;
+    public Image DarkFace;
+    public Image GlowMoon;
 
     public float Hour;
     public float Minute;
@@ -24,11 +26,11 @@ public class WatchScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        Minute += Time.deltaTime * speed;
+        Minute -= Time.deltaTime * speed;
 
         //Hour = Mathf.Floor(Hour) + (Minute / 60);
 
-        Second -= Time.deltaTime * speed * 2;
+        Second -= Time.deltaTime * speed * 6;
 
 
         if(Minute < 0)
@@ -45,12 +47,14 @@ public class WatchScript : MonoBehaviour {
         }
 
         Minute = Minute % 60;
-        Hour = Hour % 12;
+        //Hour = Hour % 12;
         Second = Second % 60;
 
         HourHand.rectTransform.localRotation = Quaternion.Euler(0, 0, -GetAngleFromInterval(Hour, 12));
         MinuteHand.rectTransform.localRotation = Quaternion.Euler(0, 0, -GetAngleFromInterval(Minute, 60));
         SecondHand.rectTransform.localRotation = Quaternion.Euler(0, 0, -GetAngleFromInterval(Mathf.Floor(Second), 60));
+        DarkFace.fillAmount = 1 - Hour / 12;
+        GlowMoon.fillAmount = 1 - Hour / 12;
     }
 
     public float GetAngleFromInterval(float interval, int maxIntervals)

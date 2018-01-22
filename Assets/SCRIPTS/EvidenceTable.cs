@@ -12,6 +12,14 @@ public class EvidenceTable : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
     private Vector2 touchOffset;
     private Vector2 initPos;
     private int initLayer;
+    public bool firstLook = false;
+
+    void Update()
+    {
+            if(evidenceRef == null)
+            evidenceRef = GetComponentInChildren<EvidenceBase>();
+
+    }
 
 
     private Vector2 CurrentTouchPosition() {
@@ -57,6 +65,11 @@ public class EvidenceTable : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
             print(clickSpeed);
             print(slowestClickSpeed);
             if (clickSpeed <= slowestClickSpeed) {
+                if (!firstLook)
+                {
+                    GameObject.Find("YarnSpinnerHolder").GetComponent<Yarn.Unity.DialogueRunner>().StartDialogue(evidenceRef.YarnNodes[0]);
+                    firstLook = true;
+                }
                 PopupManager.Instance.StartPopupAtState(evidenceRef.EnlargeID);
             }
         }

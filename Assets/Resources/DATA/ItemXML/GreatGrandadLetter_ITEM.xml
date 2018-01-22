@@ -10,4 +10,8 @@
 	</HoverTextOptions>
 	<Flags>
 	</Flags>
+  <YarnNodes>
+    <Node>BorisFirstLook</Node>
+    <Node>BorisSummary</Node>
+  </YarnNodes>
 </Evidence>

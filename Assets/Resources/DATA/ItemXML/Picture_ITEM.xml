@@ -10,4 +10,9 @@
 	</HoverTextOptions>
 	<Flags>
 	</Flags>
+
+  <YarnNodes>
+    <Node>PhotoFirstLook</Node>
+    <Node>PhotoSummary</Node>
+  </YarnNodes>
 </Evidence>

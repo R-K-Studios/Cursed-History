@@ -62,10 +62,7 @@ public class OptionsPanel : MenuUI
 
     public void Update()
     {
-        if (Input.GetButtonDown("Cancel"))
-        {
-            SetInactive();
-        }
+
     }
 
     //Set the Music Volume
