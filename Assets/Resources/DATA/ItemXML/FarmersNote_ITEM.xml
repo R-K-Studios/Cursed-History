@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<Evidence>
+	<Name>Farmer's Todo List</Name>
+	<ID>FarmerNote</ID>
+	<Icon>FarmerNote</Icon>
+	<EnlargeID>FarmerNotePopup</EnlargeID>
+	<HoverTextOptions>
+		A todo list with typical farm activities.
+	</HoverTextOptions>
+	<Flags>
+	</Flags>
+</Evidence>

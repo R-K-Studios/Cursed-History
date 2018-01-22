@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<Evidence>
+	<Name>Great-Grandfather's Letter</Name>
+	<ID>BorisLetter</ID>
+	<Icon>BorisLetter</Icon>
+	<EnlargeID>BorisLetterPopup</EnlargeID>
+	<HoverTextOptions>
+		A Letter my Great-Grandfather wrote to one of his children.
+	</HoverTextOptions>
+	<Flags>
+	</Flags>
+</Evidence>
