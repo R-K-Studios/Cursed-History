@@ -13,7 +13,6 @@ public class Gameboard : MonoBehaviour {
         GameObject[] curLevel = TreeNodeManager.Instance.GetNodeTree();
         int y = 0;
         List<GameObject> nextLevel;
-        GameObject parent = null;
         Transform row;
         do {
             int x = (rowSize - curLevel.Length) / 2;
@@ -40,13 +39,15 @@ public class Gameboard : MonoBehaviour {
                 if (children.Length > 0) {
                     foreach (GameObject kid in children) {
                         // Set the current node as this child's parent
-                        kid.GetComponent<TreeNode>().ParentNode = node;
+                        TreeNode temp = kid.GetComponent<TreeNode>();
+                        temp.ParentNode = node;
                     }
+                    Array.Sort(children);
                     nextLevel.AddRange(children);
                     nextLevel.Add(null);
                 }
                 TreeNode nodeCode = node.GetComponent<TreeNode>();
-                if (nodeCode.ParentNode != null) {
+                if (nodeCode.ShowParentLink && nodeCode.ParentNode != null) {
                     // Draw the line between the two icons
                     GameObject spline = nodeCode.spline;
                     Vector3 homeLocation = node.transform.position;
