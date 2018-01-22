@@ -22,6 +22,8 @@ public class TransitionManager : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        oldCamera = Camera.main;
+        fadeImage = GameObject.Find("FadeImage").GetComponent<RawImage>();
         SceneManager.sceneLoaded += SceneDebug;
         SceneManager.sceneUnloaded += SceneDebug;
     }
