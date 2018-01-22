@@ -98,7 +98,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4709750203434268}
   - component: {fileID: 212143545276638206}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: 0 Icon
   m_TagString: EditorOnly
   m_Icon: {fileID: 0}

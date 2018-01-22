@@ -7,12 +7,24 @@ using Pixelplacement;
 using UnityEngine.EventSystems;
 using System;
 
+public class Parent {
+    [XmlAttribute("ShowLink")]
+    public string ShowLink { get; set; }
+    [XmlText]
+    public string Name { get; set; }
+
+}
+
 public class FamilyTreeNode {
     public string Name { get; set; }
     public string ID { get; set; }
     public string Icon { get; set; }
     public string CorrectItem { get; set; }
-    public string Parent { get; set; }
+
+    public int SiblingRank { get; set; }
+
+    [XmlElement("Parent")]
+    public Parent Parent { get; set; }
 
     [XmlArray("Children")]
     [XmlArrayItem("Child")]
@@ -20,18 +32,20 @@ public class FamilyTreeNode {
     public string Bio { get; set; }
 }
 
-public class TreeNode : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerExitHandler {
+public class TreeNode : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerExitHandler, IComparable<TreeNode> {
 
     public GameObject Main;
     public GameObject portraitSpot;
     public GameObject evidenceItemSpot;
     public GameObject spline;
+    public int SiblingRank;
     public string NodeName;
     public string ID;
     public string Icon;
     public string CorrectItem;
     public string ParentName;
     public GameObject ParentNode;
+    public bool ShowParentLink;
     public GameObject[] ChildNodes;
     public string Bio;
 
@@ -52,8 +66,10 @@ public class TreeNode : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
         ID = (string)setFrom.ID.Clone();
         Icon = (string)setFrom.Icon.Clone();
         CorrectItem = (string)setFrom.CorrectItem.Clone();
-        ParentName = setFrom.Parent;
-        if(setFrom.Chidren == null) {
+        SiblingRank = setFrom.SiblingRank;
+        ParentName = setFrom.Parent.Name;
+        ShowParentLink = (setFrom.Parent.ShowLink == "true" || setFrom.Parent.ShowLink == null);
+        if (setFrom.Chidren == null) {
             childNames = null;
             ChildNodes = null;
         } else {
@@ -113,5 +129,9 @@ public class TreeNode : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
         }
         objectOver = false;
         Main.transform.localScale = initLocalScale;
+    }
+
+    public int CompareTo(TreeNode other) {
+        return SiblingRank - other.SiblingRank;
     }
 }
