@@ -8,15 +8,17 @@ public class PopUpImage : MonoBehaviour {
     public string YarnSummaryNode;
     BoxCollider2D myCollider;
     Yarn.Unity.DialogueRunner dr;
+    GameObject yarnFrame;
     // Use this for initialization
     void Start () {
         myCollider = GetComponent<BoxCollider2D>();
         dr = GameObject.Find("YarnSpinnerHolder").GetComponent<Yarn.Unity.DialogueRunner>();
+        yarnFrame = GameObject.Find("YarnFrame");
     }
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetMouseButtonUp(0) && !dr.isDialogueRunning)
+        if (Input.GetMouseButtonDown(0) && !yarnFrame.activeSelf)
         {
             Camera mainCam = GameObject.Find("Main Camera").GetComponent<Camera>();
             Vector2 mousePosition = mainCam.ScreenToWorldPoint(Input.mousePosition);
@@ -29,7 +31,7 @@ public class PopUpImage : MonoBehaviour {
         }
 	}
 
-    public void OnMouseUp()
+    public void OnMouseDown()
     {
         
         if(dr.NodeExists(YarnSummaryNode) && !dr.isDialogueRunning)
