@@ -36,6 +36,7 @@ public class EvidenceTable : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
         initLayer = gameObject.layer;
         gameObject.layer = 2;
         initPos = transform.position;
+        evidenceRef.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, .5f);
         touchOffset = initPos - CurrentTouchPosition();
         transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
         SetDraggedPosition(eventData);
@@ -49,6 +50,7 @@ public class EvidenceTable : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
     public void OnEndDrag(PointerEventData eventData) {
         gameObject.layer = initLayer;
         transform.localScale = new Vector3(1f, 1f, 1f);
+        evidenceRef.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1f);
         transform.position = initPos;
     }
 

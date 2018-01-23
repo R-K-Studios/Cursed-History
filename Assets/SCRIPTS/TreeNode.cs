@@ -61,11 +61,12 @@ public class TreeNode : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
     public bool objectOver = false;
 
     public string YarnNodeTitle;
-
+    public DialogueRunner dr;
 
     // Use this for initialization
     void Start() {
         myStateMachine = evidenceItemSpot.GetComponent<StateMachine>();
+        dr = GameObject.Find("YarnSpinnerHolder").GetComponent<DialogueRunner>();
     }
 
     public void SetFromBaseData(FamilyTreeNode setFrom) {
@@ -110,11 +111,16 @@ public class TreeNode : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
 
     private void HandleDrop(GameObject DroppedEvidence) {
         EvidenceBase curEvidenceBase = DroppedEvidence.GetComponentInChildren<EvidenceBase>();
+        string CommentNode = ID + curEvidenceBase.ID;
         currentEvidence = curEvidenceBase.gameObject;
         print(curEvidenceBase.ID);
         myStateMachine.ChangeState(curEvidenceBase.ID);
         objectOver = false;
         Main.transform.localScale = initLocalScale;
+        if (dr.NodeExists(CommentNode))
+        {
+            dr.StartDialogue(CommentNode);
+        }
     }
 
     public void OnDrop(PointerEventData eventData) {
@@ -144,7 +150,7 @@ public class TreeNode : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
     public void OnMouseUp()
     {
         //Debug.Log(YarnNodeTitle);
-        DialogueRunner dr = GameObject.Find("YarnSpinnerHolder").GetComponent<DialogueRunner>();
+
         if(!dr.isDialogueRunning)
             dr.StartDialogue(YarnNodeTitle);
     }

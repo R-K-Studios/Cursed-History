@@ -1637,6 +1637,8 @@ MonoBehaviour:
   initLocalScale: {x: 0, y: 0, z: 0}
   childNames: []
   objectOver: 0
+  YarnNodeTitle: 
+  dr: {fileID: 0}
 --- !u!114 &114933919685018750
 MonoBehaviour:
   m_ObjectHideFlags: 1
