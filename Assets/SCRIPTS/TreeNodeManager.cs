@@ -21,6 +21,7 @@ public class TreeNodeManager : Singleton<TreeNodeManager> {
     public const int prepActions = 2;
     public bool win = false;
     public bool lose = false;
+    public bool moving = false;
     public Yarn.Unity.DialogueRunner dr;
     public TransitionManager tm;
 
@@ -80,10 +81,11 @@ public class TreeNodeManager : Singleton<TreeNodeManager> {
 
     public void Update()
     {
-        if(win || lose)
+        if((win || lose) && !moving)
             if (!dr.isDialogueRunning)
             {
                 tm.TitleScreen();
+                moving = true;
             }
     }
 

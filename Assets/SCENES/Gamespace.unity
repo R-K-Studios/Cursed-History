@@ -3026,6 +3026,7 @@ MonoBehaviour:
   ready: 0
   win: 0
   lose: 0
+  moving: 0
   dr: {fileID: 659443804}
   tm: {fileID: 666703178}
 --- !u!4 &1925883899
