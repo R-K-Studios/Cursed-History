@@ -54,7 +54,7 @@ I guess Hawke was adopted when he was 4.
 title: BorisFirstLook
 tags: 
 colorID: 0
-position: -663,-269
+position: -662,-274
 ---
 A letter written by my great grandfather Boris.
 "Eldest living child" certainly applies to me and mom.
@@ -206,4 +206,278 @@ Why would you adopt someone just to inherit a watch..?
 And what exactly happened on that farm that night?
 I wonder if I can learn more by looking up that newspaper.
 Or maybe there's more clues in these other boxes?
+===
+title: EliasAdoptionPaper
+tags: 
+colorID: 0
+position: 566,-632
+---
+Hmm if I think of Elias in relation to this adoption paper...
+Then I guess Hawke adopted his son...?
+Wait... does that make sense?
+===
+title: EliasFarmerNote
+tags: 
+colorID: 0
+position: 569,-428
+---
+I think Elias wrote this note.
+Which would make him a farmer, right?
+===
+title: EliasBorisLetter
+tags: 
+colorID: 0
+position: 572,-218
+---
+According to Boris's Letter, the eldest living child should get the watch.
+Which means Elias's or his kids have the watch!
+...Uh...?
+===
+title: EliasNewspaper
+tags: 
+colorID: 0
+position: 787,-617
+---
+Maybe Elias has something to do with this incident.
+what if he owned the dog that attacked?
+Does... that really tell me anything?
+===
+title: EliasPhoto
+tags: 
+colorID: 0
+position: 802,-182
+---
+What if this is Elias's handwriting?
+If his dad's parents adopted him, then I wonder why he made note of this picture.
+Was he looking into his dad's adoption?
+I guess that detail doesn't matter.
+===
+title: EliasMothersNote
+tags: 
+colorID: 0
+position: 798,-401
+---
+What if Mom got the watch from Elias?
+Would that make him her dad?
+Uh... how old is he?
+===
+title: Node29
+tags: 
+colorID: 0
+position: 1071,-661
+---
+Empty Text
+===
+title: HawkeAdoptionPaper
+tags: 
+colorID: 0
+position: 1071,-661
+---
+According to this scrap, Hawke Channon was adopted.
+I guess that explains why his last name isn't "Wolfram".
+===
+title: Node31
+tags: 
+colorID: 0
+position: 1259,-635
+---
+Empty Text
+===
+title: HawkeNewspaper
+tags: 
+colorID: 0
+position: 1259,-635
+---
+Was Hawke the brother that disappeared?
+I guess that would make him my grandpa.
+Does that timeline really match up?
+===
+title: HawkeMothersNote
+tags: 
+colorID: 0
+position: 1278,-429
+---
+I wonder if Hawke was mom's dad.
+That'd make her maiden name 'Channon', wouldn't it?
+I don't think I've ever heard that, but that guess is as good as any.
+===
+title: HawkeBorisLetter
+tags: 
+colorID: 0
+position: 1064,-224
+---
+Boris says something about a sacrifice..?
+What a weird way to say that.
+But if the letter says he wanted Hawke to have it, then Hawke must have inherited it right?
+===
+title: HawkeFarmerNote
+tags: 
+colorID: 0
+position: 1061,-448
+---
+I'm guessing Hawke wrote this note.
+Then again he refers to himself by name here.
+That's a little weird.
+===
+title: HawkePhoto
+tags: 
+colorID: 0
+position: 1314,-238
+---
+Maybe Hawke wrote on this photo.
+Was Boris adopted?
+I don't think I have anything here to prove that.
+===
+title: LoupeAdoptionPaper
+tags: 
+colorID: 0
+position: 595,96
+---
+Looks like Hawke was adopted shortly after Loupe was born.
+I... don't know if that's important information.
+===
+title: LoupeNewspaper
+tags: 
+colorID: 0
+position: 828,92
+---
+Loupe has to be either the farmer or the one who disappeared.
+Do I already know who the farmer is?
+===
+title: LoupeFarmerNote
+tags: 
+colorID: 0
+position: 579,301
+---
+Could Loupe be a farmer?
+He doesn't seem the type, from his photo.
+But books and covers.
+Hmm, maybe I should look closer at this note.
+===
+title: LoupeMothersNote
+tags: 
+colorID: 0
+position: 817,317
+---
+I can see the family resemblance.
+There doesn't seem to be much relating to Loupe directly in mom's note though.
+This doesn't tell me anything.
+===
+title: LoupeBorisLetter
+tags: 
+colorID: 0
+position: 585,518
+---
+Loupe was Boris's first naturally born son.
+He seems to think Loupe getting the watch is inevitable.
+Which is weird considering how inheretance usually works...
+Not sure if this really helps me.
+===
+title: LoupePhoto
+tags: 
+colorID: 0
+position: 814,536
+---
+Did Loupe write this?
+Was Boris adopted?
+I don't think I can prove that either way.
+===
+title: FoxAdoptionPaper
+tags: 
+colorID: 0
+position: 1108,43
+---
+Fox was born way after this adoption happened.
+I don't think thinking about him in relation to this page helps.
+===
+title: FoxNewspaper
+tags: 
+colorID: 6
+position: 1315,41
+---
+By the names used, Fox is either the farmer or the one who disappeared.
+If there's a way to prove who owned the farm, that'd be helpful.
+===
+title: FoxFarmerNote
+tags: 
+colorID: 0
+position: 1097,254
+---
+Well, Loupe and Hawke are named in this note.
+Makes sense to assume this was written by Fox.
+So Fox was a farmer, huh?
+===
+title: FoxMothersNote
+tags: 
+colorID: 0
+position: 1332,249
+---
+Is Fox mom's dad?
+Is there a way to link them together?
+===
+title: FoxBorisLetter
+tags: 
+colorID: 0
+position: 1119,468
+---
+Well if Fox is my grandpa, Boris would be pretty upset about it.
+I guess it's safe to assume something would have had to happen to Loupe for that to happen.
+So I can see why.
+What does this tell me though?
+===
+title: FoxPhoto
+tags: 
+colorID: 0
+position: 1350,459
+---
+I'm pretty sure Fox has nothing to do with this photo.
+===
+title: KimmyMothersNote
+tags: 
+colorID: 0
+position: 1743,-444
+---
+Mom's middle name was "Wolfram"?
+I guess she might have moved her maiden name.
+Which means she used to be Kimmy Wolfram.
+===
+title: KimmyNewspaper
+tags: 
+colorID: 0
+position: 1714,-703
+---
+That's definitely mom's handwriting.
+Guess she was looking into this before.
+Knowing that doesn't really help though.
+===
+title: KimmyFarmerNote
+tags: 
+colorID: 0
+position: 1500,-451
+---
+This was written by a farmer, not my mom.
+===
+title: KimmyAdoptionPaper
+tags: 
+colorID: 0
+position: 1505,-693
+---
+Mom's a bit removed from this date to be related.
+===
+title: MomBorisLetter
+tags: 
+colorID: 0
+position: 1538,-208
+---
+Mom highlighted all over this thing.
+She seems about as into the curse as I am.
+But I don't think she got very far into the mystery.
+===
+title: KimmyPhoto
+tags: 
+colorID: 0
+position: 1733,-248
+---
+This makes sense if mom's dad was adopted.
+But this doesn't really seem like her handwriting.
 ===
