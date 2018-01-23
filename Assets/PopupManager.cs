@@ -14,11 +14,13 @@ public class PopupManager : Singleton<PopupManager> {
     public int curPuzzle = 1;
     public bool showPopup = false;
     public string stateToShow = "";
+    Yarn.Unity.DialogueRunner dr;
 
     private StateMachine curPopStateMachine;
 
     void Start() {
         curPopStateMachine = popupStateMachine[curPuzzle - 1];
+        dr = GameObject.Find("YarnSpinnerHolder").GetComponent<Yarn.Unity.DialogueRunner>();
     }
 
     // Update is called once per frame
@@ -39,7 +41,7 @@ public class PopupManager : Singleton<PopupManager> {
     }
 
     private void CheckForEscape() {
-        if (curShow && Input.GetButtonDown("Cancel")) {
+        if (curShow && Input.GetButtonDown("Cancel") && !dr.isDialogueRunning) {
             showPopup = false;
         }
     }

@@ -18,7 +18,7 @@ public class PopUpImage : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetMouseButtonDown(0) && !yarnFrame.activeSelf)
+        if (Input.GetMouseButtonDown(0) && !dr.isDialogueRunning)
         {
             Camera mainCam = GameObject.Find("Main Camera").GetComponent<Camera>();
             Vector2 mousePosition = mainCam.ScreenToWorldPoint(Input.mousePosition);

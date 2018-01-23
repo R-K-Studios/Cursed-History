@@ -19,11 +19,7 @@ public class InGameMenu : MenuUI {
             }
             else if (!IsActive())
             {
-                if (pop.showPopup)
-                {
-                    
-                }
-                else
+                if (!pop.showPopup)
                 {
                     SetActive();
                 }
